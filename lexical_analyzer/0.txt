@@ -1,0 +1,8 @@
+This is a test text file
+123 simba123;
+5 * 5.0
+int num1;
+! hello world !
+.
+max_INT
+hello world

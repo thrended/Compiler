@@ -1,0 +1,32 @@
+<Statement> -> <Assign> | <Declarative> 
+<Assign> -> <ID> = <Expression>
+<Declarative> -> <Type> <ID>
+<Expression> -> <Term> <ExpressionPrime>
+<ExpressionPrime> -> + <Term> <ExpressionPrime> | - <Term> <ExpressionPrime> | Epsilon
+<Term> -> <Factor> <TermPrime>
+<TermPrime> -> * <Factor> <TermPrime> | / <Factor> <TermPrime> | Epsilon
+<Factor> -> ( <Expression> ) | <ID> | num
+<ID> -> id
+<Type> -> bool | float | int
+
+First(<Statement>) = { id, bool, float, int }
+First(<Assign>) = { id }
+First(<Declarative>) = { bool, float, int }
+First(<Expression>) = { (, id, num }
+First(<ExpressionPrime>) = { +, -, Epsilon }
+First(<Term>) = { (, id, num }
+First(<TermPrime>) = { *, /, Epsilon }
+First(<Factor>) = { (, id, num }
+First(<ID>) = { id }
+First(<Type>) = { bool, float, int }
+
+Follow(<Statement>) = { $ }
+Follow(<Assign>) = { $ }
+Follow(<Declarative>) = { $ }
+Follow(<Expression>) = { ), $ }
+Follow(<ExpressionPrime>) = { ), $ }
+Follow(<Term>) = { +, -, ), $ }
+Follow(<TermPrime>) = { +, -, ), $ }
+Follow(<Factor>) = { *, /, +, -, ), $ }
+Follow(<ID>) = { =, *, /, +, -, ), $ }
+Follow(<Type>) = { id }  

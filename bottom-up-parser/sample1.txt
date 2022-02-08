@@ -1,0 +1,24 @@
+! Find largest value between two numbers, also add some local variables!
+int num, nu2m, large$;
+num = 0;
+nu2m = 15;
+boolean hey;
+hey = true;
+hey = false;
+if(num > nu2m)
+{
+	int h = 1;
+	if(5 == num)
+		int i = 1;
+	endif
+	large$ = num;
+}
+else
+{
+	int j = 1;
+	if(Y > X)
+		int k = 0;
+	endif
+	large$ = nu2m;
+}
+endif
