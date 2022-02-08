@@ -2,4 +2,4 @@
 
 Collaboration projects with KirbyNguyen (Duc Nguyen)
 
-Original repository links provided in subfolders
+Links to original repositories provided in subfolders
